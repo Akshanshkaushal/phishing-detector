@@ -3,44 +3,74 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  font-size: 62,5%;
+  box-sizing: border-box;
 }
 
 body {
-  padding: 10% 5%;
-  background-image: url("http://127.0.0.1:5000/static/img/hh.jpg");
-  justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  color: #fff;
+  padding: 20px;
+  background-image: url("img/hh.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
 }
 
-.form__label {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  margin-left: 2rem;
-  margin-top: 0.7rem;
-  display: block;
-  transition: all 0.3s;
-  transform: translateY(0rem);
+.form-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .form__input {
-  top: -24px;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
-  font-size: 1.2rem;
-  padding: 1.5rem 2rem;
-  border-radius: 0.2rem;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  width: 65%;
-  display: block;
-  border-bottom: 0.3rem solid transparent;
-  transition: all 0.3s;
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form__label {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.result-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .form-wrapper, .result-wrapper {
+    padding: 15px;
+  }
+
+  .form__input {
+    padding: 12px;
+    font-size: 14px;
+  }
 }
 
 .form__input:placeholder-shown + .form__label {
@@ -49,7 +79,6 @@ body {
   -webkit-transform: translateY(+4rem);
   transform: translateY(+4rem);
 }
-
 
 .button {
   appearance: button;
@@ -87,7 +116,6 @@ body {
 .button:focus {
   box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
-
 
 .main-body{
   display: flex;
@@ -157,11 +185,6 @@ body {
   width: 300px; 
 }
 
-@media (max-width: 576px) { 
-  .form {
-    width: 100%;
-  }
- }
 .abc{
   width: 50%;
 }
